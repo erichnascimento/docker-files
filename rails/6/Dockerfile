@@ -5,6 +5,7 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - \
   && apt-get update -qq \
   && apt-get install -y build-essential libpq-dev nodejs ghostscript \
   && npm install yarn -g \
+  && curl -o- -L https://yarnpkg.com/install.sh | bash \
   # The following are used to trim down the size of the image by removing unneeded data
   && apt-get clean autoclean \
   && apt-get autoremove -y \
